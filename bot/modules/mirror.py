@@ -139,7 +139,12 @@ class MirrorListener(listeners.MirrorListeners):
 
     def onUploadComplete(self, link: str, size):
         with download_dict_lock:
-            msg = f'<b>Filename : </b><code>{download_dict[self.uid].name()}</code>\n<b>Size : </b><code>{size}</code>'
+            msg = f'<b>📁 Filename : </b><code>{download_dict[self.uid].name()}</code>\n<b>Size : </b><code>{size}</code>'\n \
+                  f' \n' \
+                  f'⌾ 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐓𝐞𝐚𝐦 𝐃𝐫𝐢𝐯𝐞 𝐅𝐨𝐫 𝐚𝐜𝐜𝐞𝐬𝐬𝐢𝐧𝐠 𝐆-𝐃𝐫𝐢𝐯𝐞 𝐋𝐢𝐧𝐤. \n' \
+                  f'⊗ 𝐃𝐨 𝐍𝐨𝐭 𝐒𝐡𝐚𝐫𝐞 𝐆-𝐃𝐫𝐢𝐯𝐞 / 𝐈𝐧𝐝𝐞𝐱 𝐋𝐢𝐧𝐤𝐬 𝐎𝐮𝐭𝐬𝐢𝐝𝐞 𝐭𝐡𝐞 𝐆𝐫𝐨𝐮𝐩. \n' \
+                  f'\n' \
+                  f'☁️ 𝐕𝐞𝐠𝐚𝐂𝐥𝐨𝐮𝐝 𝐉𝐨𝐢𝐧 ➞ @VegaCloud
             buttons = button_build.ButtonMaker()
             if SHORTENER is not None and SHORTENER_API is not None:
                 surl = requests.get('https://{}/api?api={}&url={}&format=text'.format(SHORTENER, SHORTENER_API, link)).text
