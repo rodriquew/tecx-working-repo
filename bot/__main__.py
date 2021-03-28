@@ -30,7 +30,7 @@ def stats(update, context):
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
     stats = f'<b>𝗪𝗵𝗲𝗻 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝘀𝗲𝗲𝗺𝘀 𝘁𝗼 𝗯𝗲 𝗴𝗼𝗶𝗻𝗴 𝗮𝗴𝗮𝗶𝗻𝘀𝘁 𝘆𝗼𝘂 𝗿𝗲𝗺𝗲𝗺𝗯𝗲𝗿 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲 𝗮𝗶𝗿𝗽𝗹𝗮𝗻𝗲 𝘁𝗮𝗸𝗲𝘀 𝗼𝗳𝗳 𝗮𝗴𝗮𝗶𝗻𝘀𝘁 𝘁𝗵𝗲 𝘄𝗶𝗻𝗱 𝗻𝗼𝘁 𝘄𝗶𝘁𝗵 𝗶𝘁. - 𝗛𝗲𝗻𝗿𝘆 𝗙𝗼𝗿𝗱</b>\n' \
-            f'<b>╭─────────「 VegaCloudBot2 」</b>\n' \
+            f'<b>╭─────────「 VegaCloudBot1 」</b>\n' \
             f'<b>│</b>\n' \
             f'<b>├ ⌚Bot Uptime:</b> {currentTime}\n' \
             f'<b>├ 💾Total disk space:</b> {total}\n' \
@@ -42,7 +42,7 @@ def stats(update, context):
             f'<b>├ ⛏️RAM:</b> {memory}% \n' \
             f'<b>├ 🗄️Disk:</b> {disk}% \n' \
             f'<b>│</b>\n' \
-            f'<b>╰─────────「 VegaCloudBot2 」</b>'
+            f'<b>╰─────────「 VegaCloudBot1 」</b>'
     sendMessage(stats, context.bot, update)
 
 
