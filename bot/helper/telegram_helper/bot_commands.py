@@ -12,11 +12,11 @@ class _BotCommands:
         self.UnAuthorizeCommand = 't1unauthorize'
         self.PingCommand = 't1ping'
         self.RestartCommand = 't1restart'
-        self.StatsCommand = 't1stats'
+        self.StatsCommand = 'statst1'
         self.HelpCommand = 't1help'
         self.LogCommand = 'lt1'
         self.SpeedCommand = 'stt1'
-        self.CloneCommand = "t2clone1"
+        self.CloneCommand = "t1clone"
         self.WatchCommand = 't1watch'
         self.TarWatchCommand = 't1tarwatch'
         self.DeleteCommand = 'del'
