@@ -93,23 +93,23 @@ def get_readable_message():
     with download_dict_lock:
         msg = ""
         for download in list(download_dict.values()):
-            msg += f"<b>📂 Filename :</b> <code>{download.name()}</code>"
-            msg += f"\n<b>🚦 Status :</b> <i>{download.status()}</i>"
+            msg += f"<b>╭─ 📂 Filename :</b> <code>{download.name()}</code>"
+            msg += f"\n<b>├─ 🚦 Status :</b> <i>{download.status()}</i>"
             if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
-                msg += f"\n🌀 <code>{get_progress_bar_string(download)} {download.progress()}</code>"
+                msg += f"\n├─ 🌀 <code>{get_progress_bar_string(download)} {download.progress()}</code>"
                 if download.status() == MirrorStatus.STATUS_DOWNLOADING:
-                    msg += f"\n<b>🔽 Downloaded :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                    msg += f"\n<b>├─ 🔽 Downloaded :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
                 else:
-                    msg += f"\n<b>🔼 Uploaded :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                msg += f"\n<b>⚡️ Speed :</b> {download.speed()}, \n<b>⏳ ETA :</b> {download.eta()} "
+                    msg += f"\n<b>├─ 🔼 Uploaded :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                msg += f"\n<b>├─ ⚡️ Speed :</b> {download.speed()}, \n<b>├─ ⏳ ETA :</b> {download.eta()} "
                 # if hasattr(download, 'is_torrent'):
                 try:
-                    msg += f"\n<b>⚓️ Info :- Seeders :</b> {download.aria_download().num_seeders}" \
+                    msg += f"\n<b>├─ ⚓️ Info :- Seeders :</b> {download.aria_download().num_seeders}" \
                         f" & <b>Peers :</b> {download.aria_download().connections}"
                 except:
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
-                msg += f"\n<b>💢 To Stop :</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                msg += f"\n<b>╰─ 💢 To Stop :</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             msg += "\n\n"
         return msg
 
