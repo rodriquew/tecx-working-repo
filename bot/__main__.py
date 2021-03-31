@@ -29,8 +29,8 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>𝗪𝗵𝗲𝗻 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝘀𝗲𝗲𝗺𝘀 𝘁𝗼 𝗯𝗲 𝗴𝗼𝗶𝗻𝗴 𝗮𝗴𝗮𝗶𝗻𝘀𝘁 𝘆𝗼𝘂 𝗿𝗲𝗺𝗲𝗺𝗯𝗲𝗿 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲 𝗮𝗶𝗿𝗽𝗹𝗮𝗻𝗲 𝘁𝗮𝗸𝗲𝘀 𝗼𝗳𝗳 𝗮𝗴𝗮𝗶𝗻𝘀𝘁 𝘁𝗵𝗲 𝘄𝗶𝗻𝗱 𝗻𝗼𝘁 𝘄𝗶𝘁𝗵 𝗶𝘁. - 𝗛𝗲𝗻𝗿𝘆 𝗙𝗼𝗿𝗱</b>\n\n' \
-            f'<b>╭─────────「 VegaCloudBot1 」</b>\n' \
+    stats = f'<b>𝐎𝐯𝐞𝐫 𝐄𝐯𝐞𝐫𝐲 𝐏𝐨𝐬𝐬𝐞𝐬𝐬𝐨𝐫 𝐨𝐟 𝐊𝐧𝐨𝐰𝐥𝐞𝐝𝐠𝐞 𝐓𝐡𝐞𝐫𝐞 𝐢𝐬 𝐒𝐨𝐦𝐞 𝐎𝐧𝐞 𝐄𝐥𝐬𝐞 𝐌𝐨𝐫𝐞 𝐊𝐧𝐨𝐰𝐥𝐞𝐝𝐠𝐞𝐚𝐛𝐥𝐞</b>\n\n' \
+            f'<b>╭─────────「 TTUcloudbot1  」</b>\n' \
             f'<b>│</b>\n' \
             f'<b>├  ⌚Bot Uptime:</b> {currentTime}\n' \
             f'<b>├  💾Total disk space:</b> {total}\n' \
@@ -42,17 +42,17 @@ def stats(update, context):
             f'<b>├  ⛏️RAM:</b> {memory}% \n' \
             f'<b>├  🗄️Disk:</b> {disk}% \n' \
             f'<b>│</b>\n' \
-            f'<b>╰─────────「 VegaCloudBot1 」</b>'
+            f'<b>╰─────────「 TTUcloudbot1  」</b>'
     sendMessage(stats, context.bot, update)
 
 
 @run_async
 def start(update, context):
     start_string = f'''
-Hi, I'm pryo, mega bot at currently working @VegaCloud
+Hi, I'm pryo, mega bot at currently working @TTUcloud
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
-    update.effective_message.reply_photo("https://telegra.ph/file/28ef630fde21614248d96.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo("https://telegra.ph/file/c85cf87497283a59564dd.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
 
 
 @run_async
